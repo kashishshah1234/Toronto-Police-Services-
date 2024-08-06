@@ -1,0 +1,40 @@
+@keyframes fadeAndGrow {
+    0% { opacity: 0; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideIn {
+    0% { transform: translate(-100%, -100%); opacity: 0; }
+    100% { transform: translate(0, 0); opacity: 1; }
+}
+
+.animated-header {
+    animation: fadeAndGrow 3s ease-in-out, slideIn 5s ease-out forwards, glow 3s ease-in-out infinite alternate;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive;
+    font-size: 36px;
+    background: linear-gradient(to right, #FF6347, #FFD700, #00BFFF, #32CD32); /* Gradient color */
+    -webkit-background-clip: text; /* Clipping the background to text for gradient effect */
+    -webkit-text-fill-color: transparent; /* Fill color for gradient text */
+}
+
+.georgian-logo {
+    animation: slideInLogo 5s ease-out forwards;  /* Use the slideInLogo keyframe animation */
+    display: inline-block;
+    height: 50px;  /* Adjust the height as needed */
+    margin-left: 20px;  /* Space between text and logo */
+}
+
+@keyframes slideInLogo {
+    0% {
+        transform: translate(100%, -100%);  /* Start from off-screen to the right */
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0);  /* End at the final position */
+        opacity: 1;
+    }
+}
